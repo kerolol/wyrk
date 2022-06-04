@@ -1,13 +1,19 @@
 <script lang="ts">
-    export let path: string;
+    import { Link } from 'svelte-navigator'
+    import type { Breadcrumb } from '../interfaces'
+    
 
-    $: headers = path.split(';')
+    export let items: Array<Breadcrumb>
 </script>
 
 <ul class="flex mt-4 text-sm text-wyrk-200">
-    {#each headers as header, index}
-        <li class="mr-4">{header}</li>
-        {#if headers.length -1 !== index}
+    {#each items as item, index}
+        <li class="mr-4">
+            <Link to="{item.path}">
+                {item.label}
+            </Link>
+        </li>
+        {#if items.length -1 !== index}
             <li class="mr-4">/</li>
         {/if}
     {/each}
