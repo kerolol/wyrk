@@ -43,5 +43,9 @@
                 {field.body}
             </div>
         {/each}
+    {:else}
+        <div class="col-span-12 text-white p-4">
+            <p>No contents available.</p>
+        </div>
     {/each}
 </div>
