@@ -25,7 +25,7 @@
     }],
     rows: [{
         id: 1,
-        path: '/projects/tasks',
+        path: '/project/proj/tasks',
         contents: [{
             id: 1,
             header: 1,

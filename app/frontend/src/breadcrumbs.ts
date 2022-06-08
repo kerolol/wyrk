@@ -4,7 +4,7 @@ export default {
             path: '/projects',
             label: 'Projects'
         }, {
-            path: '',
+            path: '/project/proj',
             label: 'PRJ - Project'
         }, {
             path: '',
