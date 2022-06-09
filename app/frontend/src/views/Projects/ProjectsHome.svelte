@@ -1,9 +1,16 @@
 <script lang="ts">
     import ContentHeader from "../../components/ContentHeader.svelte"
     import Table from "../../components/Table.svelte"
+    import Button from "../../components/Button.svelte";
 </script>
 
-<ContentHeader title="Projects" breadcrumbs={null} />
+<ContentHeader 
+    title="Projects" 
+    breadcrumbs={null}
+    useSlot={true}
+>
+    <Button label="Hallo" outlined icon="home" color="blue" />
+</ContentHeader>
 
 <Table useLinks data={{
     headers: [{
@@ -42,6 +49,26 @@
             id: 4,
             header: 4,
             body: '2d 13h 54m'
+        }]
+    }, {
+        id: 2,
+        path: '/project/aproj/tasks',
+        contents: [{
+            id: 1,
+            header: 1,
+            body: 'APROJ'
+        }, {
+            id: 2,
+            header: 2,
+            body: 'Another Project Name'
+        }, {
+            id: 3,
+            header: 3,
+            body: 'Maintenance'
+        }, {
+            id: 4,
+            header: 4,
+            body: '12d 5h 38m'
         }]
     }]
 }} />

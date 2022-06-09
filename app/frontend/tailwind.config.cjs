@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   purge: [],
@@ -12,7 +14,14 @@ module.exports = {
         600: '#1f3246',
         800: '#142435'
       },
-      'white': '#ffffff'
+      white: '#ffffff',
+      green: colors.green,
+      red: colors.red,
+      blue: colors.blue,
+      yellow: colors.yellow,
+      orange: colors.orange,
+      transparent: 'transparent',
+      current: 'currentColor'
     },
     fontFamily: {
       'sans': 'Inter'
